@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Distribución de Carga en Apoyos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Distribución de Carga en Apoyos</h1>
+        <p>Esta calculadora te permite calcular la carga en cada apoyo de un puente o estructura similar.</p>
+        <form id="calculator-form">
+            <div class="input-group">
+                <label for="n">Número total de apoyos (n):</label>
+                <input type="number" id="n" min="1" required>
+            </div>
+            <div class="input-group">
+                <label for="L">Longitud total del puente (L) en metros:</label>
+                <input type="number" id="L" step="0.01" min="0" required>
+            </div>
+            <div id="dynamic-inputs"></div>
+            <button type="button" id="calculate-button">Calcular</button>
+            <button type="button" id="reset-button">Restablecer</button>
+        </form>
+        <div id="results"></div>
+        <canvas id="results-chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
